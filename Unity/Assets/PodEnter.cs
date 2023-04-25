@@ -28,6 +28,10 @@ public class PodEnter: MonoBehaviour
             MainCamera.SetActive(false);
         }
 
-        
+        if (Input.GetKeyDown(KeyCode.Z))
+        {
+            FollowCamera.SetActive(false);
+            MainCamera.SetActive(true);
+        }
     }
 }
