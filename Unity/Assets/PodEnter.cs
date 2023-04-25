@@ -33,5 +33,8 @@ public class PodEnter: MonoBehaviour
             FollowCamera.SetActive(false);
             MainCamera.SetActive(true);
         }
+
+       
+       
     }
 }
