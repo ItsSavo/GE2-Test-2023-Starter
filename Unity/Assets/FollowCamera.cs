@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class FollowCamera : MonoBehaviour
 {
-    public Transform target; 
+
+    
+    public Transform target;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,5 +18,10 @@ public class FollowCamera : MonoBehaviour
     {
         transform.position = Vector3.Lerp(transform.position, target.position, Time.deltaTime);
         transform.LookAt(target.parent);
+
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            
+        }
     }
 }

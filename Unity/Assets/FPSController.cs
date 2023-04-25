@@ -8,7 +8,6 @@ public class FPSController : MonoBehaviour
     public GameObject mainCamera;
     public float speed = 50.0f;
     public float lookSpeed = 150.0f;
-
     public bool allowPitch = true;
 
     public GUIStyle style;
@@ -20,6 +19,8 @@ public class FPSController : MonoBehaviour
         {
             mainCamera = Camera.main.gameObject;
         }
+
+        
     }
 
     void Yaw(float angle)
@@ -71,9 +72,10 @@ public class FPSController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         //Cursor.lockState = CursorLockMode.Confined;
-  
+       
+
+
         float mouseX, mouseY;
         float speed = this.speed;
 
@@ -124,5 +126,6 @@ public class FPSController : MonoBehaviour
         float contStrafe = Input.GetAxis("Horizontal");
         Walk(contWalk * speed * Time.deltaTime);
         Strafe(contStrafe * speed * Time.deltaTime);
+
     }
 }
